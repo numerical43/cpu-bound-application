@@ -6,17 +6,15 @@
 
 
 CPU를 극단적으로 사용하는 프로그램은 I/O 연산을 적게하고, CPU 연산을 많이 사용한다.
-
 CPU 연산을 많이 사용하기위해 Hash 연산, 그 중에서도 MD5 Hash 연산을 반복적으로 사용하는 애플리케이션으로 성능 부하 테스트를 해보려고한다.
 
 ---------------------------------------------
 
 ## Artillery 
 
-
-Artillery는 성능을 측정하고 시각적 자료로 결과를 보여준다.  
+Artillery는 성능을 측정하고 시각적 자료로 결과를 보여준다.
 artillery-scripts 폴더를 만들고 그 안에 cpu-test.yaml 파일을 생성한다.
-
+####
 ### Artillery Script
 ```yaml
 # Artillery 스트레스 테스트 스크립트 (cpu-test.yaml)
@@ -41,12 +39,11 @@ scenarios:
 artillery run --output report.json cpu-test.yaml
 </pre>
 
-실행시키고나면 cpu-test.yaml 이 있는 폴더에 report.json 이라는 파일이 생긴 것을 확인할 수 있다.  
-json 파일로는 확인이 힘드니까 html 페이지로 시각화하여 확인해보자.
+실행시키고나면 cpu-test.yaml 이 있는 폴더에 report.json 이라는 파일이 생긴 것을 확인할 수 있다. json 파일로는 확인이 힘드니까 html 페이지로 시각화하여 확인해보자.
 <pre>
 artillery report report.json
 </pre>
-
+###
 ### 최신 버전 Artillery 는 UI가 변경되어서 곡선 그래프를 확인할 수 없어요!
 
 ```
